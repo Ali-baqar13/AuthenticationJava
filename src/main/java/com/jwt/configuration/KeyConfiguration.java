@@ -1,0 +1,22 @@
+package com.jwt.configuration;
+
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration 
+@ConfigurationProperties(prefix="app.security")
+public class KeyConfiguration {
+
+    private String secretKey;
+
+    public String getSecretKey(){
+        return this.secretKey;
+
+    }
+
+    public void setSecretKey(String secretKey){
+        this.secretKey = secretKey;
+    }
+
+    
+}
